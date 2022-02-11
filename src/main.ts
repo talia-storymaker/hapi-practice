@@ -1,5 +1,3 @@
-'use strict';
-
 import { ResponseToolkit } from "@hapi/hapi";
 
 const Hapi = require('@hapi/hapi');
