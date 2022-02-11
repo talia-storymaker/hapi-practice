@@ -33,16 +33,41 @@ const init = async () => {
                 view: {
                     template: 'standard',
                     context: {
-                        name: 'Dogs are amazing'
+                        name: 'Dogs are amazing',
+                        image: 'ylanite-dog.jpg',
+                        imageDesc: 'Dog laying on grass',
+                        textContent: 'I absolutely love dogs! They are such wonderful companions.'
                     }
                 }
             }
         },
         {
             method: 'GET',
-            path: '/me.jpg',
+            path: '/about-me',
+            handler: {
+                view: {
+                    template: 'standard',
+                    context: {
+                        name: 'My name is Talia DeGisi',
+                        image: 'me.jpg',
+                        imageDesc: 'Portrait of Talia DeGisi, a young white woman with brown hair, smiling',
+                        textContent: 'I am a web developer.'
+                    }
+                }
+            }
+        },
+        {
+            method: 'GET',
+            path: '/img/me.jpg',
             handler: (request: Request, h: ResponseToolkitInert) => {
                 return h.file('img/me.jpg');
+            }
+        },
+        {
+            method: 'GET',
+            path: '/img/ylanite-dog.jpg',
+            handler: (request: Request, h: ResponseToolkitInert) => {
+                return h.file('img/ylanite-dog.jpg');
             }
         },
         {

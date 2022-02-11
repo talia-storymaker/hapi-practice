@@ -1,3 +1,56 @@
+@mixin flex-space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: sans-serif;
+}
+
+header, footer {
+    background: #ccc;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    li {
+        padding: 10px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    header {
+        @include flex-space-between;
+        nav {
+            @include flex-space-between;
+            ul {
+                @include flex-space-between;
+            }
+        }
+    }
+}
+
+main {
+    min-height: 92vh;
+    padding: 20px;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: .5em;
+}
+
+p {
+    margin-bottom: 1em;
 }

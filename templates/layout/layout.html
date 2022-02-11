@@ -3,9 +3,25 @@
     <head>
         <title>{{name}}</title>
         <link href="/css/main.css" rel="stylesheet" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
     </head>
     <body>
-        <h1>{{name}}</h1>
-        {{content}}
+        <header>
+            <span class="site-title">Talia's Epic Site</span>
+            <nav>
+                <ul>
+                    <li><a href="/dogs">Dogs</a></li>
+                    <li><a href="/about-me">About Me</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1>{{name}}</h1>
+            {{{content}}}
+        </main>
+        <footer>
+            &copy; Talia DeGisi. It was {{time}} when this page loaded.
+        </footer>
     </body>
 </html>
